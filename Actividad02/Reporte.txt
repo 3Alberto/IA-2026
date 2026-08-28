@@ -1,0 +1,5 @@
+Cuando ejecute el juego del wumpus con mi_cueva_4x4.yaml, los resultados variaron dependiendo de cada agente.
+Los agentes que lograron salir con el oro de mi mapa fueron: el agente basado en modelo (con 11 pasos y 989 puntos), el agente basado en objetivos (con 11 pasos y 989 puntos), el agente basado en utilidades (con 13 pasos y 987 puntos), y el agente de Aprendizaje (con 10 pasos y 990 puntos).
+Cabe mencionar que el agente de Aprendizaje tuvo que iterar 732 episodios de entrenamiento para poder salir victorioso.
+Por otra parte, el agente de Reflejo Simple falló. Se quedo atorado en un bucle infinito dando vueltas hacia la derecha en la posición [3,1], dado que un pozo esta en la posición [4,1], el código del agente tiene la regla que ante una brisa, siempre debe girar a la derecha. 
+Por último, el agente Basado en Modelo tiene un comportamiento interesante. Si acerco un pozo (a la posición [1, 2] o [2, 1]): El agente se queda atascado en el inicio dando vueltas, ya que percibe una brisa en [1, 1]. Por otro lado, si alejo los pozos el agente mapea libremente todas las celdas seguras hasta encontrar el oro en [2, 2]. 
