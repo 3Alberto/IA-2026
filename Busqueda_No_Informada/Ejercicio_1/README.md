@@ -2,7 +2,7 @@
 
 Contexto: Se presenta los resultados de ejecutar múltiples algoritmos de búsqueda no informada y de costo uniforme sobre el mapa de Rumania, partiendo de **Lugoj** con destino a **Hirsova**.
 
-Subgrafo de la Ruta Encontrada
+## Subgrafo de la Ruta Encontrada
 
 ```text
 (Lugoj) --70-- (Mehadia) --75-- (Drobeta) --120-- (Craiova)
