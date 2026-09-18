@@ -2,6 +2,8 @@
 
 Contexto: Se presenta los resultados de ejecutar dos algoritmos de búsqueda informada (Greedy y A*) para encontrar una ruta entre dos ciudades del mapa carretero de Rumania. Además, ambos algoritmos comparten el mismo grafo, el mismo RouteFindingProblem y la misma heurística h(n).
 
+## Las ciudades seleccionadas para este ejercicio fueron: Oradea (origen) y Eforie (destino).
+
 ## Subgrafo de la Ruta Encontrada
 
 ```text
