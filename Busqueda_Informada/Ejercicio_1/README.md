@@ -37,6 +37,7 @@ Pitesti (h≈253) ------ (101) ----------Bucharest (h≈166)
 ## Tabla Comparativa de Algoritmos
 
 | **Algorithm** | **Path (Route Found)** | **Depth** | **Cost (km)** | **Expanded Nodes (Approx.)** | **Heuristic Used** | 
+| :--- | :--- | :--- | :--- | :--- | :--- |
 | **Greedy Best-First** | Oradea → Sibiu → Fagaras → Bucharest → Urziceni → Hirsova → Eforie | 6 roads | 730 km | 6 |  Distancia Euclidiana | 
 | **A\*** | Oradea → Sibiu → Rimnicu Vilcea → Pitesti → Bucharest → Urziceni → Hirsova → Eforie | 7 roads | 698 km | 11 | EDistancia Euclidiana | 
 
