@@ -1,16 +1,60 @@
 # Ejercicio 1 — Separar los blobs y volver a elegir (k)
 
-# Centros modificados:
+## Centros modificados:
 
+### Distribución Espacial de los 5 Blobs Modificados
 
+#### Tabla de Parámetros
 
+| Centro | Coordenadas $(x_1, x_2)$ | Desviación estándar (`blob_std`) | Radio visual ($1\sigma$) |
+| :---: | :---: | :---: | :---: |
+| **C1** | $(0.2,\, 2.3)$ | `0.30` | Amplio |
+| **C2** | $(-1.5,\, 2.3)$ | `0.25` | Mediano |
+| **C3** | $(-3.0,\, 3.0)$ | `0.20` | Compacto |
+| **C4** | $(-3.3,\, 1.6)$ | `0.20` | Compacto |
+| **C5** | $(-2.0,\, 0.9)$ | `0.20` | Compacto |
 
-# Archivo modificado:
+```text
+      y ^
+ 3.40 |                                                                            
+      |                                                                            
+      |           ..  ...                                                          
+ 3.02 |          ..  +C3.                                                          
+      |           ..   ..                                                          
+      |             ...                                                            
+ 2.64 |                                                                ...         
+      |                                   ... ...                   ..     ..      
+      |                                  .       .                 ..        .     
+ 2.25 |                                  .   +C2 .                 ..   +C1  .     
+      |                                   ..   ..                   ..      ..     
+      |                                      .                        ......       
+ 1.87 |                                                                            
+      |      ..   ..                                                               
+      |      .  +C4.                                                               
+ 1.49 |      ..   ..                                                               
+      |        ...                                                                 
+      |                                                                            
+ 1.11 |                            .....                                           
+      |                           .     .                                          
+      |                           .  +C5.                                          
+ 0.73 |                            .....                                           
+      |                                                                            
+      +--------------------------------------------------------------------------- > x
+             -3.5    -3.0    -2.5    -2.0    -1.5    -1.0    -0.5    0.0     0.5   
+```
+
+* **`+`**: Posición exacta del centroide del blob.
+* **`.`**: Contorno aproximado a $1\sigma$ de dispersión (`blob_std`).
+
+---
+
+## Archivo modificado:
 https://colab.research.google.com/drive/1E5eJ0dFXIh4YddHdrPoIUU4VHAMcB36Q?usp=sharing
+### En la carpeta capturas se encuentran las imagenes de las graficas originales y modificadas.
 
-## En la carpeta capturas se encuentran las imagenes de las graficas originales y modificadas.
+---
 
-# Reporte:
+## Reporte:
 
 ### 1. En los datos de Géron, ¿por qué el codo “prefiere” $k = 4$ si se usaron 5 centros?
 
@@ -31,7 +75,3 @@ Significa que el algoritmo todavía "siente" que dos grupos son en realidad uno 
 * **O alejas más los centros:** Aumentas la distancia en $x$ o en $y$ para que no queden tan vecinos.
 * **O reduces el `blob_std`:** Haces las nubes más concentradas y apretaditas para que no se mezclen las orillas.
 Para que K-Means no se confunda, la distancia entre cualquier par de centros tiene que ser bastante mayor que la suma de sus radios de dispersión ($\text{distancia} \gg \text{std}_1 + \text{std}_2$). Si la distancia es chica comparada con el tamaño de las nubes, el codo siempre va a preferir fusionarlas.
-
-# Ejecutado desde google colab
-
-![alt text](image.png)
